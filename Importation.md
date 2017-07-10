@@ -1,7 +1,7 @@
 -   [1 Importing data](#importing-data)
--   [1.1 Download data for the
-    tutorial](#download-data-for-the-tutorial)
--   [1.2 Read the data into R](#orgheadline2)
+    -   [1.1 Download data for the
+        tutorial](#download-data-for-the-tutorial)
+    -   [1.2 Read the data into R](#orgheadline2)
 -   [2 Check if data are imported
     correctly](#check-if-data-are-imported-correctly)
 -   [3 Preparing the data for analysis](#orgheadline5)
@@ -9,7 +9,8 @@
     -   [4.1 text csv format](#orgheadline6)
     -   [4.2 R data format](#r-data-format)
 
-### 1 Importing data
+1 Importing data
+----------------
 
 This tutorial explains how a text format data file (comma separated
 values) can be read into R. Before you start note the following:
@@ -30,7 +31,8 @@ values) can be read into R. Before you start note the following:
 
 Save the [Diabetes
 data](http://192.38.117.59/~tag/Teaching/share/data/Diabetes.html) in
-the current [R working directory](./R-working-directory.html).
+the current [R working
+directory](http://192.38.117.59/~tag/Teaching/share/R-tutorials/R-working-directory.html).
 
 ### 1.2 Read the data into R
 
