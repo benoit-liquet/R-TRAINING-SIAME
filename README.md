@@ -4,16 +4,16 @@ Tutoriel on R
 ## WEDNESDAY 12 JULY 2017 
 
 - Importation data set 
-- Excel, txt, ...
+    - Excel, txt, ...
 - Manipulation data set
 - Visualisation data 
-- plot, scatter-plot, boxplot
+    - plot, scatter-plot, boxplot
 - Basic Stat
-- Correlation, summary stat, mediane, moyenne, variance, ...
+    - Correlation, summary stat, mediane, moyenne, variance, ...
 - Basic Probability
-- pdf, histogram, density estimation, smooth estimation
+    - pdf, histogram, density estimation, smooth estimation
 - Time serie
-- visualisation, decomposition
+    - visualisation, decomposition
 
 ## FOLLOW UP SEPTEMBER 2017
 
