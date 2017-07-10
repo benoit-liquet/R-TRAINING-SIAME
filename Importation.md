@@ -1,11 +1,13 @@
--   [1. Importing data](#orgheadline3)
-    -   [1.1. Download data for the tutorial](#orgheadline1)
-    -   [1.2. Read the data into R](#orgheadline2)
--   [2. Check if data are imported correctly](#orgheadline4)
--   [3. Preparing the data for analysis](#orgheadline5)
--   [4. Exporting/saving data](#orgheadline8)
-    -   [4.1. text csv format](#orgheadline6)
-    -   [4.2. R data format](#orgheadline7)
+-   [1 Importing data](#importing-data)
+-   [1.1 Download data for the
+    tutorial](#download-data-for-the-tutorial)
+-   [1.2 Read the data into R](#orgheadline2)
+-   [2 Check if data are imported
+    correctly](#check-if-data-are-imported-correctly)
+-   [3 Preparing the data for analysis](#orgheadline5)
+-   [4 Exporting/saving data](#exportingsaving-data)
+    -   [4.1 text csv format](#orgheadline6)
+    -   [4.2 R data format](#r-data-format)
 
 ### 1 Importing data
 
