@@ -1,34 +1,31 @@
-WEDNESDAY 12 JULY 2017
-----------------------
+---
+title: "TRAINING R SOFTWARE: LEVEL1"
+author: "Benoit Liquet"
+date: "July 5, 2017"
+output: md_document
+---
 
--   Importation data set
-    -   Excel, txt, ...
--   Manipulation data set
--   Visualisation data
-    -   plot, scatter-plot, boxplot
--   Basic Stat
-    -   Correlation, summary stat, mediane, moyenne, variance, ...
--   Basic Probability
-    -   pdf, histogram, density estimation, smooth estimation
--   Time serie
-    -   visualisation, decomposition
 
-FOLLOW UP SEPTEMBER 2017
-------------------------
 
--   Linear model: univariate and multivariate
--   PCA
--   Non-linear model
--   fft ?
--   parametric density estimation
--   analyse des extremes
+## WEDNESDAY 12 JULY 2017 
 
-<!-- -->
+- Importation data set 
+    - Excel, txt, ...
+- Manipulation data set
+- Visualisation data 
+    - plot, scatter-plot, boxplot
+- Basic Stat
+    - Correlation, summary stat, mediane, moyenne, variance, ...
+- Basic Probability
+    - pdf, histogram, density estimation, smooth estimation
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+
+## 16 November 2017
+
+- Revision of previous session 
+    - Analysis of a data set on a survey about behaviour diet of elderly
+    - Analysis of this data set is here \url{https://github.com/benoit-liquet/R-TRAINING-SIAME/blob/master/Correction_report_nutrition.md}
+- Linear model: univariate and multivariate
+
+
+
