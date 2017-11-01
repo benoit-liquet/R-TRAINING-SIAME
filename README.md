@@ -24,12 +24,12 @@ Tutoriel on R
     - Download the file [Analysis.zip](/ANALYSIS.zip)
     - Reproduce the same result as in [Correction_report_nutrition.md](/Correction_report_nutrition.md)
     - Try to do the same analyis on your own data set 
-    - I have attached one in case you don't have one: 
+    - If you don't have any one: choose this one [intima-media](http://biostatisticien.eu/springeR/jeuxDonnees3.html) 
     
 - Linear model: univariate and multivariate (1h/1h30)
 
     - Linear Model
     - Anova Model
     
-## 16 November 2017
+## 23 November 2017
 
