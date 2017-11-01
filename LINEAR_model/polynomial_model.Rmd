@@ -1,0 +1,104 @@
+---
+title: "Polynomial Model"
+author: "Benoit Liquet"
+date: "November 1, 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Polynomial regression
+
+In a polynomial model, the relationship between the explained variable $Y$ and an explanatory variable $X$ is represented in a non-linear fashion, such as:
+\[Y=\beta_0+\beta_1X+\beta_2X^2+\ldots+\beta_pX^p+\epsilon.\]
+This model is a multiple regression model with $p$ regressors: the powers of the explanatory variable.
+
+To perform regression in a polynomial model, you simply need to correctly specify the formula associated with the model in the  function **lm()**. Two R functions are useful: **I()** and  **poly()**. The next table gives a few examples of formulae for polynomial models.
+
+
+```{r, results = "asis", echo = FALSE, message = FALSE}
+library(knitr)
+
+tex2markdown <- function(texstring) {
+  writeLines(text = texstring,
+             con = myfile <- tempfile(fileext = ".tex"))
+  texfile <- pandoc(input = myfile, format = "html")
+  cat(readLines(texfile), sep = "\n")
+  unlink(c(myfile, texfile))
+}
+
+textable <- "
+\\begin{table}
+\\begin{tabular}{ll}
+\\hline
+\\textbf{Model}&  \\textbf{R formula} \\\\
+\\hline\\hline
+$M_1$: $Y=\\beta_0+\\beta_1X+\\beta_2X^2$ & Y$\\sim$poly(X,2,raw=TRUE)\\\\
+$M_2$: $Y=\\beta_1X+\\beta_2X^2+\\beta_3X^3$ & Y$\\sim$-1+poly(X,3,raw=TRUE)\\\\
+$M_3$: $Y=\\beta_0+\\beta_1X+\\beta_2X^3$ & Y$\\sim$\\verb#X+I(X^3)#\\\\
+$M_4$: $Y=\\beta_1X+\\beta_2X^3+\\beta_3X^4$ & Y$\\sim$\\verb#-1+X+I(X^3)+ I(X^4)#\\\\
+\\hline
+\\end{tabular}
+\\end{table}
+"
+
+tex2markdown(textable)
+```
+
+
+
+## Example on synthetic data
+
+Suppose you are asked to propose a model to predict a  variable $Y$ given an explanatory variable $X$. You are given a sample of size~$n$. 
+
+
+
+- Download the file http://biostatisticien.eu/springeR/fitpoly.RData in your current directory.
+
+```{r}
+load("fitpoly.RData")
+attach(fitpoly)
+```
+
+- Draw a scatter plot of variable $Y$ as a function of variable $X$.
+
+```{r}
+plot(Y~X)
+```
+
+- Is there a linear relationship between these two variables? Fit a regression line on the previous plot.
+
+```{r}
+lin.model <- lm(Y~X)
+summary(lin.model)
+plot(Y~X)
+abline(lin.model)
+```
+
+- Perform polynomial regression to fit the data better.
+
+```{r}
+poly.model <- lm(Y~poly(X,3,raw=TRUE),data=fitpoly)
+summary(poly.model)
+```
+
+- Draw the estimated polynomial over the scatter plot. Draw the confidence curve for the mean of $Y$ for $X\in[-3.5,3.5]$. Add the prediction interval of the model for $X\in[-3.5,3.5]$.
+
+```{r}
+coef <- coef(poly.model)
+plot(Y~X)
+curve(coef[1]+coef[2]*x+coef[3]*x^2+coef[4]*x^3,add=TRUE)
+x <- seq(-3.5,3.5,length=50)
+pred.int <- predict(poly.model,data.frame(X=x),
+                    interval="prediction")[,c("lwr","upr")]
+conf.int <- predict(poly.model,data.frame(X=x),
+                    interval="confidence")[,c("lwr","upr")]
+matlines(x,cbind(conf.int,pred.int),lty=c(2,2,3,3),
+         col=c("red","red","blue","blue"),lwd=c(2,2,1,1))
+legend("bottomright",lty=c(2,3),lwd=c(2,1),
+       c("confidence","prediction"),col=c("red","blue"))
+```
