@@ -1,6 +1,7 @@
 # R-TRAINING-SIAME
 Tutoriel on R 
 
+
 ## WEDNESDAY 12 JULY 2017 
 
 - Importation data set 
@@ -12,14 +13,11 @@ Tutoriel on R
     - Correlation, summary stat, mediane, moyenne, variance, ...
 - Basic Probability
     - pdf, histogram, density estimation, smooth estimation
-- Time serie
-    - visualisation, decomposition
 
-## FOLLOW UP SEPTEMBER 2017
 
+## 16 November 2017
+
+- Revision of previous session 
+    - Analysis of a data set on a survey about behaviour diet of elderly
+    - Analysis of this data set could be found at Correction_report_nutrition.md
 - Linear model: univariate and multivariate
-- PCA
-- Non-linear model
-- fft ?
-- parametric density estimation
-- analyse des extremes 
