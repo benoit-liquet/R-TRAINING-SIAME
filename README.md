@@ -28,8 +28,14 @@ Tutoriel on R
     
 - Linear model: univariate and multivariate (1h/1h30)
 
-    - Linear Model
-    - Anova Model
+    - Some slides [here](/LINEAR_model/Lecture-Linear-Model.pdf)
+    - If you want to reproduce analysis from slides you need this data file [fishHG.txt](/LINEAR_model/fishHG.txt)
+    - Polynomial Model: some R code [here](/LINEAR_model/polynomial_model.md)
+    
     
 ## 23 November 2017
+
+    - Time series analysis: short introduction
+    - Extreme Value : short introduction
+        
 
