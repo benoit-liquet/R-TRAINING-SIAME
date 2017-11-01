@@ -257,7 +257,14 @@ attach(nutri)
 ```
 
 ```
-The following objects are masked from nutri (pos = 4):
+The following objects are masked from nutri (pos = 3):
+
+    age, chocol, coffee, cooked_fruit_veg, fat, fish, gender,
+    height, meat, raw_fruit, situation, tea, weight
+```
+
+```
+The following objects are masked from nutri (pos = 5):
 
     age, chocol, coffee, cooked_fruit_veg, fat, fish, gender,
     height, meat, raw_fruit, situation, tea, weight
@@ -633,7 +640,7 @@ shapiro.test(fakedata)
 	Shapiro-Wilk normality test
 
 data:  fakedata
-W = 0.99968, p-value = 0.6478
+W = 0.99948, p-value = 0.191
 ```
 
 We cannot reject null hypothesis "data come from Normal distribution", so we can assume that our assumption is not violated 
