@@ -254,23 +254,6 @@ The function attach()  gives direct access to the variables
 
 ```r
 attach(nutri)
-```
-
-```
-The following objects are masked from nutri (pos = 3):
-
-    age, chocol, coffee, cooked_fruit_veg, fat, fish, gender,
-    height, meat, raw_fruit, situation, tea, weight
-```
-
-```
-The following objects are masked from nutri (pos = 5):
-
-    age, chocol, coffee, cooked_fruit_veg, fat, fish, gender,
-    height, meat, raw_fruit, situation, tea, weight
-```
-
-```r
 ##Show the gender of the first five subjects
 gender[1:5]
 ```
@@ -549,34 +532,7 @@ plot(density(age))
 
 
 ```r
-plot(density(age),add=TRUE)
-```
-
-```
-Warning in plot.window(...): "add" is not a graphical parameter
-```
-
-```
-Warning in plot.xy(xy, type, ...): "add" is not a graphical parameter
-```
-
-```
-Warning in axis(side = side, at = at, labels = labels, ...): "add" is not a
-graphical parameter
-
-Warning in axis(side = side, at = at, labels = labels, ...): "add" is not a
-graphical parameter
-```
-
-```
-Warning in box(...): "add" is not a graphical parameter
-```
-
-```
-Warning in title(...): "add" is not a graphical parameter
-```
-
-```r
+plot(density(age))
 hist(age,breaks=10,col="green",prob=TRUE,add=TRUE)
 ```
 
@@ -640,7 +596,7 @@ shapiro.test(fakedata)
 	Shapiro-Wilk normality test
 
 data:  fakedata
-W = 0.99948, p-value = 0.191
+W = 0.99939, p-value = 0.09699
 ```
 
 We cannot reject null hypothesis "data come from Normal distribution", so we can assume that our assumption is not violated 
