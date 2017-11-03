@@ -6,7 +6,7 @@ output: html_notebook
   
   
 
-##Multiple time series
+## Multiple time series
 Here we illustrate a few important ideas and concepts related to multiple time series data. The monthly supply of electricity (millions of kWh), beer (Ml),
 and chocolate-based production (tonnes) in Australia over the period January
 1958 to December 1990 are available from the Australian Bureau of Statistics
@@ -48,7 +48,8 @@ Choc.ts<-ts(CBE[,1],start=1958, freq=12)
 plot(cbind(Elec.ts, Beer.ts, Choc.ts)) # Fig. 1.5.
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
+![plot of chunk multiple](figure/multiple-1.png)
+
 The plots show increasing trends in production for all three
 goods, partly due to the rising population in Australia from about 10 million
 to about 18 million over the same period. But notice that electricity
@@ -103,7 +104,7 @@ plot(AP, main="", ylab="Air passengers / 1000's") # Fig. 1.7. (oben)
 plot(Elec, main="", ylab="Electricity porduction / MkWh") # Fig. 1.7 (unten)
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 
 
@@ -113,7 +114,7 @@ plot(as.vector(AP), as.vector(Elec), xlab="Air passengers", #as.vector is needed
 abline(reg=lm(Elec~AP)) #Linear model trend line
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png)
 
 ```r
 cor(AP, Elec) #Correlation coefficient => CORRELATION DOES NOT IMPLY CAUSATION!!! This is a good example for that!
