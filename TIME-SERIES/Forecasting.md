@@ -6,8 +6,10 @@ output:
   html_document: default
   pdf_document: default
 ---
-  ## Introduction
-  In these notes we demonstrate how to forecast Time Series with R
+
+## Introduction
+
+In these notes we demonstrate how to forecast Time Series with R
 
 
 ```r
@@ -74,7 +76,7 @@ plot(dom.ts, main="Time Series of Domestic Pasengers",
 grid()
 ```
 
-![plot of chunk Plotting Time Series](figure/Plotting Time Series-1.png)
+![plot of chunk PlottingTimeSeries](figure/PlottingTimeSeries-1.png)
 
 Seems like a structural break between 2008 - 2010. There seems to be an upward trend prior to 2008. Then around 2009 there was a sharp fall, and a new trend started in 2010.
 
@@ -88,7 +90,7 @@ library(ggplot2)
 autoplot(fit1, main="Decomposition by STL method")
 ```
 
-![plot of chunk Decomposing with stl()](figure/Decomposing with stl()-1.png)
+![plot of chunk Decomposingwithstl](figure/Decomposingwithstl-1.png)
 
 **Decomposing with ets()**
 
@@ -98,7 +100,7 @@ library(ggplot2)
 autoplot(fit2)
 ```
 
-![plot of chunk Decomposing with ets()](figure/Decomposing with ets()-1.png)
+![plot of chunk Decomposingwithets](figure/Decomposingwithets-1.png)
 
 **Plotting monthly variation**
 
@@ -106,7 +108,7 @@ autoplot(fit2)
 monthplot(dom.ts, main="Monthly Variation of Domestic Pasengers")
 ```
 
-![plot of chunk Monthly variation](figure/Monthly variation-1.png)
+![plot of chunk Monthlyvariation](figure/Monthlyvariation-1.png)
 
 **Plotting seasonal componnent**
 
@@ -114,7 +116,7 @@ monthplot(dom.ts, main="Monthly Variation of Domestic Pasengers")
 seasonplot(dom.ts, main="Seasonal Variation of Domestic Pasengers") 
 ```
 
-![plot of chunk Seasonal componnent](figure/Seasonal componnent-1.png)
+![plot of chunk Seasonalcomponnent](figure/Seasonalcomponnent-1.png)
 
 **Forecasting the time series**
 
@@ -199,7 +201,7 @@ plot(f, lwd=2, main="Historical and Forecasted Doemestic Passengers")
 grid()
 ```
 
-![plot of chunk Plotting forecasted data](figure/Plotting forecasted data-1.png)
+![plot of chunk Plottingforecasteddata](figure/Plottingforecasteddata-1.png)
 
 **Saving the forecasted data**
 
