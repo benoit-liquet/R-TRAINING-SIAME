@@ -36,6 +36,11 @@ Tutoriel on R
 ## 23 November 2017
 
     - Time series analysis: short introduction
+        - Some slides [here](/TIME-SERIES/Lecture-TIME-series-DYNEA-2016.pdf)
+        - A simple imtroduction [here](/TIME-SERIES/Simple_Time_Series_Modelling.md)
+        - Mutiple Time Seies [here](/TIME-SERIES/Mutiple-time-series.md)
+        - Exercise: case study [here](/TIME-SERIES/Case-Study-Global-Temperature.md)
+        
     - Extreme Value : short introduction
         
 
