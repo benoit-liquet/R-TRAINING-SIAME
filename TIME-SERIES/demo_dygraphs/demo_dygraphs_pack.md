@@ -1,0 +1,85 @@
+---
+title: "Time Series with dygraphs"
+output:
+  html_document:
+    fig_width: 6
+    fig_height: 4
+---
+
+
+
+
+
+
+```r
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures", ylab = "Temp (F)") 
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'webshot'
+```
+
+
+## Simple demos
+
+
+```r
+library(dygraphs)
+lungDeaths <- cbind(mdeaths, fdeaths)
+dygraph(lungDeaths)
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'webshot'
+```
+
+
+Note that this graph is fully interactive: as your mouse moves over the series individual values are displayed. You can also select regions of the graph to zoom into (double-click zooms out).
+
+You can customize dygraphs by piping additional commands onto the original dygraph object. Here we pipe a dyRangeSelector onto our original graph:
+
+
+```r
+dygraph(lungDeaths) %>% dyRangeSelector()
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'webshot'
+```
+
+
+Note that this example uses the %>% (or “pipe”) operator from the magrittr package to compose the dygraph with the range selector. You use a similar syntax to customize axes, series, and other options. For example:
+
+
+```r
+dygraph(lungDeaths) %>%
+  dySeries("mdeaths", label = "Male") %>%
+  dySeries("fdeaths", label = "Female") %>%
+  dyOptions(stackedGraph = TRUE) %>%
+  dyRangeSelector(height = 20)
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'webshot'
+```
+
+Many options for customizing series and axis display are available. It’s even possible to combine multiple lower/value/upper style series into a single display with shaded bars. Here’s an example that illustrates shaded bars, specifying a plot title, suppressing the drawing of the grid for the x axis, and the use of a custom palette for series colors:
+
+
+
+```r
+hw <- HoltWinters(ldeaths)
+predicted <- predict(hw, n.ahead = 72, prediction.interval = TRUE)
+
+dygraph(predicted, main = "Predicted Lung Deaths (UK)") %>%
+  dyAxis("x", drawGrid = FALSE) %>%
+  dySeries(c("lwr", "fit", "upr"), label = "Deaths") %>%
+  dyOptions(colors = RColorBrewer::brewer.pal(3, "Set1"))
+```
+
+```
+## Error in loadNamespace(name): there is no package called 'webshot'
+```
+
+Various features are available [here](http://rstudio.github.io/dygraphs/index.html)
