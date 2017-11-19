@@ -37,7 +37,7 @@ Tutoriel on R
 
 - Time series analysis: short introduction 
     - Some slides [here](/TIME-SERIES/Lecture-TIME-series-DYNEA-2016.pdf)
-    - A simple imtroduction [here](/TIME-SERIES/Simple_Time_Series_Modelling.md)
+    - A simple introduction [here](/TIME-SERIES/Simple_Time_Series_Modelling.md)
     - Mutiple Time Series [here](/TIME-SERIES/Multiple-time-series.md)
     - Short example on Arima model [here](/TIME-SERIES/Arima_model.md)
     - Forecasting [here](/TIME-SERIES/Forecasting.md)
@@ -45,4 +45,4 @@ Tutoriel on R
         
 - Extreme Value : short introduction
     - case study [here](/EXTREME_ANALYSIS/Tools_Exreme_Analysis.md)    
-
+    - A nice R package exTremes [here](/EXTREME_ANALYSIS/Tutorial_exTremes_package.pdf)  
